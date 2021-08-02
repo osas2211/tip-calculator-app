@@ -117,8 +117,11 @@ body {
   background-image: url("../images/icon-person.svg"); }
 
 @media (max-width: 1200px) {
+  .header {
+    top: 6rem; }
   .main-layout {
-    width: 70vw; }
+    width: 80vw;
+    top: -4rem; }
     .main-layout .input, .main-layout .calc-tip {
       flex-basis: 100%; }
     .main-layout .calc-tip {
@@ -128,11 +131,9 @@ body {
         margin-top: 3rem; } }
 
 @media (max-width: 700px) {
-  .header {
-    top: 6rem; }
   .main-layout {
     width: 100vw;
-    top: 0;
+    top: -6rem;
     border-radius: 30px; }
     .main-layout .input {
       flex-basis: 100%; }
