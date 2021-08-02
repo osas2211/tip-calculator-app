@@ -134,7 +134,9 @@ body {
   .main-layout {
     width: 100vw;
     top: -6rem;
-    border-radius: 30px; }
+    border-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
     .main-layout .input {
       flex-basis: 100%; }
     .main-layout .grid-container {

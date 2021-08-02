@@ -24,6 +24,8 @@
         width: 100vw;
         top: -6rem;
         border-radius: 30px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
         .input{
             flex-basis: 100%;
         }
@@ -31,6 +33,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
+        
     }
     
 }
