@@ -1,0 +1,24 @@
+.input-full-width{
+    outline: none;
+    border: none;
+    text-align: end;
+    padding: 0.5rem;
+    background-color: $Light-grayish-cyan-2;
+    width: 100%;
+}
+
+.bill, .num{
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position-y: center;
+    background-position-x: 5px;
+    font-weight: 700;
+    color: $Very-dark-cyan;
+}
+
+.bill{
+    background-image: url(/images/icon-dollar.svg);
+}
+.num{
+    background-image: url(/images/icon-person.svg);
+}

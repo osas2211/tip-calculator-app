@@ -2,17 +2,92 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Space Mono", "Courier New", Courier, monospace; }
 
 body {
   background: #c5e4e7; }
 
 .container {
-  position: relative; }
+  position: relative;
+  -height: 100vh; }
+
+.main-layout {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.24);
+  position: absolute;
+  top: 1rem;
+  right: 50%;
+  transform: translate(50%, 50%);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem; }
+  .main-layout .input {
+    flex-basis: 50%; }
+    .main-layout .input .input__bill, .main-layout .input .tip-selection {
+      margin-bottom: 1.5rem; }
+    .main-layout .input .tip-selection .tip {
+      text-align: center;
+      background-color: #00494d;
+      color: white;
+      padding: 0.5rem;
+      border-radius: 3px; }
+  .main-layout .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px; }
+    .main-layout .grid-container .tip-custom input {
+      width: 100%;
+      padding: 0.5rem;
+      outline: none;
+      border: none;
+      background-color: #edf6f7; }
+  .main-layout .calc-tip {
+    flex-basis: 50%;
+    padding: 1rem; }
+
+.text {
+  font-size: 0.76rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  opacity: 0.7;
+  margin-bottom: 5px; }
 
 .header {
   position: absolute;
   top: 5rem;
   right: 50%;
-  transform: translateX(50%);
-  height: 100vh; }
+  transform: translateX(50%); }
+
+.input-full-width {
+  outline: none;
+  border: none;
+  text-align: end;
+  padding: 0.5rem;
+  background-color: #edf6f7;
+  width: 100%; }
+
+.bill, .num {
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position-y: center;
+  background-position-x: 5px;
+  font-weight: 700;
+  color: #00494d; }
+
+.bill {
+  background-image: url(/images/icon-dollar.svg); }
+
+.num {
+  background-image: url(/images/icon-person.svg); }
+
+@media (max-width: 700px) {
+  .header {
+    top: 6rem; }
+  .main-layout {
+    width: 100vw;
+    top: 0;
+    border-radius: 30px; }
+    .main-layout .input {
+      flex-basis: 100%; } }

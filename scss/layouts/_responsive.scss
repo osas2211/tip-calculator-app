@@ -1,0 +1,13 @@
+@media (max-width: 700px) {
+    .header{
+        top: 6rem;
+    }
+    .main-layout{
+        width: 100vw;
+        top: 0;
+        border-radius: 30px;
+        .input{
+            flex-basis: 100%;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.main-layout{
+    background-color: $White;
+    border-radius: 20px;
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.24);
+    position: absolute;
+    top: 1rem;
+    right: 50%;
+    transform: translate(50%, 50%);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    
+
+    .input{
+        flex-basis: 50%;
+        .input__bill, .tip-selection{
+            margin-bottom: 1.5rem;
+        }
+        .tip-selection{
+            .tip{
+                text-align: center;
+                background-color: $Very-dark-cyan;
+                color: $White;
+                padding: 0.5rem;
+                border-radius: 3px;
+            }
+
+            
+        }
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        .tip-custom input{
+            width: 100%;
+            padding: 0.5rem;
+            outline: none;
+            border: none;
+            background-color: $Light-grayish-cyan-2;
+        }
+        
+    }
+
+    .calc-tip{
+        flex-basis: 50%;
+        padding: 1rem;
+    }
+
+}
+
+
+
+.text{
+    font-size: 0.76rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    opacity: 0.7;
+    margin-bottom: 5px;
+}

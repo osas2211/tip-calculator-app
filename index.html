@@ -13,6 +13,48 @@
         <header class="header">
             <img src="images/logo.svg" alt="Logo" srcset="">
         </header>
+
+        <main class="main-layout">
+            <div class="input">
+                <div class="input__bill">
+                    <p class="text">Bill</p>
+                    <input type="number" class="input-full-width bill" placeholder="0">
+                </div>
+                <div class="tip-selection">
+                    <p class="text">select tip %</p>
+                    <div class="grid-container">
+                        <div class="tip">5%</div>
+                        <div class="tip">10%</div>
+                        <div class="tip">15%</div>
+                        <div class="tip">25%</div>
+                        <div class="tip">50%</div>
+                        <div class="tip-custom">
+                            <input type="number" placeholder="custom" class="custom">
+                        </div>
+                    </div>
+                      
+                </div>
+                <div class="num-of-people">
+                    <p class="text">Number of people</p>
+                    <input type="number" class="input-full-width num" placeholder="0">
+                </div>
+            </div>
+
+            <div class="calc-tip">
+                <div class="tip-amount">
+                    <p class="amout-text">Tip amount <span>/per person</span></p>
+                    <p class="amount">$0.00</p>
+                </div>
+                <div class="total">
+                    <p class="amount-text">Tip amount <span>/per person</span></p>
+                    <p class="amount">$0.00</p>
+                </div>
+
+                <div class="reset">
+                    <a href="#" class="btn">reset</a>
+                </div>
+            </div>
+        </main>
     </div>
 
     <script src="js/script.js"></script>
