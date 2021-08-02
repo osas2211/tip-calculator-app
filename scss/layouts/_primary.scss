@@ -9,10 +9,11 @@
     display: flex;
     flex-wrap: wrap;
     padding: 2rem;
+    justify-content: center;
     
 
     .input{
-        flex-basis: 50%;
+        flex-basis: 48%;
         .input__bill, .tip-selection{
             margin-bottom: 1.5rem;
         }
@@ -44,12 +45,36 @@
     }
 
     .calc-tip{
-        flex-basis: 50%;
-        padding: 1rem;
+        flex-basis: 48%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 2rem;
+        background-color: $Very-dark-cyan;
+        margin-left: 4%;
+        border-radius: 10px;
+        color: $White;
+        .tip-amount{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .amount-text{
+                font-size: 0.8rem;
+                span{
+                    display: block;
+                    font-size: 0.7rem;
+                    opacity: 0.6;
+                }
+                
+            }
+            .amount{
+                font-size: 2rem;
+                color: $strong-cyan;
+            }
+        }
     }
 
 }
-
 
 
 .text{

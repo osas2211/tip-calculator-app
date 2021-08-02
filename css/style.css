@@ -22,9 +22,10 @@ body {
   transform: translate(50%, 50%);
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem; }
+  padding: 2rem;
+  justify-content: center; }
   .main-layout .input {
-    flex-basis: 50%; }
+    flex-basis: 48%; }
     .main-layout .input .input__bill, .main-layout .input .tip-selection {
       margin-bottom: 1.5rem; }
     .main-layout .input .tip-selection .tip {
@@ -44,8 +45,28 @@ body {
       border: none;
       background-color: #edf6f7; }
   .main-layout .calc-tip {
-    flex-basis: 50%;
-    padding: 1rem; }
+    flex-basis: 48%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #00494d;
+    margin-left: 4%;
+    border-radius: 10px;
+    color: white; }
+    .main-layout .calc-tip .tip-amount {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .main-layout .calc-tip .tip-amount .amount-text {
+        font-size: 0.8rem; }
+        .main-layout .calc-tip .tip-amount .amount-text span {
+          display: block;
+          font-size: 0.7rem;
+          opacity: 0.6; }
+      .main-layout .calc-tip .tip-amount .amount {
+        font-size: 2rem;
+        color: #26c0ab; }
 
 .text {
   font-size: 0.76rem;
@@ -59,6 +80,19 @@ body {
   top: 5rem;
   right: 50%;
   transform: translateX(50%); }
+
+.btn:link,
+.btn:visited {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  color: #00494d;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: #26c0ab;
+  font-weight: 700; }
 
 .input-full-width {
   outline: none;
@@ -77,10 +111,21 @@ body {
   color: #00494d; }
 
 .bill {
-  background-image: url(/images/icon-dollar.svg); }
+  background-image: url("../images/icon-dollar.svg"); }
 
 .num {
-  background-image: url(/images/icon-person.svg); }
+  background-image: url("../images/icon-person.svg"); }
+
+@media (max-width: 1200px) {
+  .main-layout {
+    width: 70vw; }
+    .main-layout .input, .main-layout .calc-tip {
+      flex-basis: 100%; }
+    .main-layout .calc-tip {
+      margin-top: 4%;
+      margin-left: 0; }
+      .main-layout .calc-tip .reset {
+        margin-top: 3rem; } }
 
 @media (max-width: 700px) {
   .header {
@@ -90,4 +135,7 @@ body {
     top: 0;
     border-radius: 30px; }
     .main-layout .input {
-      flex-basis: 100%; } }
+      flex-basis: 100%; }
+    .main-layout .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr; } }

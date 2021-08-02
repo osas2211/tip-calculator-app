@@ -1,3 +1,20 @@
+@media (max-width: 1200px) {
+    .main-layout{
+        width: 70vw;
+        .input, .calc-tip{
+            flex-basis: 100%;
+        }
+        .calc-tip {
+            margin-top: 4%;
+            margin-left: 0;
+            .reset{
+                margin-top: 3rem;
+            }
+        }
+    }
+    
+}
+
 @media (max-width: 700px) {
     .header{
         top: 6rem;
@@ -9,5 +26,10 @@
         .input{
             flex-basis: 100%;
         }
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
     }
+    
 }
