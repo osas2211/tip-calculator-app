@@ -10,6 +10,10 @@ const ui = new UI;
 
 grid.addEventListener("click", (e)=>{
     ui.active(e.target, grid);
+    if (e.target.className === "tip"){
+        const tipCalc = new Tip(Number(bill.value), Number(numPersonInput.value), custom.value);
+        ui.showResult(tipCalc.calcTip(), tipCalc.calcTotal())
+    }
 })
 
 custom.addEventListener("focus", ()=>{
@@ -19,19 +23,23 @@ custom.addEventListener("focus", ()=>{
     }
 })
 
-numPersonInput.addEventListener("keyup", (e)=>{
-    if(numPersonInput.value === "0" || numPersonInput.value === ""){
-        document.querySelector(".error").style.display = "block";
-        numPersonInput.id = "input-error";
-    }
-    else if(numPersonInput.value !== 0){
-        const tipCalc = new Tip(Number(bill.value), Number(numPersonInput.value), custom.value);
-        document.querySelector(".error").style.display = "none";
-        numPersonInput.id = "";
-        ui.showResult(tipCalc.calcTip(), tipCalc.calcTotal())
-        document.querySelector(".reset").style.opacity = "1";
-    }
-    e.preventDefault()
+const events = [bill, custom, numPersonInput];
+
+events.forEach((input)=>{
+    input.addEventListener("keyup", (e)=>{
+        if(numPersonInput.value === "0" || input.value === ""){
+            document.querySelector(".error").style.display = "block";
+            input.id = "input-error";
+        }
+        else if(input.value !== 0){
+            const tipCalc = new Tip(Number(bill.value), Number(numPersonInput.value), custom.value);
+            document.querySelector(".error").style.display = "none";
+            input.id = "";
+            ui.showResult(tipCalc.calcTip(), tipCalc.calcTotal())
+            document.querySelector(".reset").style.opacity = "1";
+        }
+        e.preventDefault()
+    })
 })
 
 reset.addEventListener("click", ()=>{

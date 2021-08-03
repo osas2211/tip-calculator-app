@@ -1,5 +1,5 @@
 class Tip{
-    constructor(bill, numPerson, tipPecent){
+    constructor(bill = 0, numPerson = 1, tipPecent = 1){
         this.bill = bill;
         this.numPerson = numPerson;
         this.tipPecent = tipPecent;
@@ -33,6 +33,7 @@ class UI{
         for (this.tip__ of document.querySelectorAll(".tip")){
             this.tip__.id = "";
         }
+        document.querySelector(".reset").style.opacity = "0.5"
     }
     active(target, grid){
         if (target.className === "tip"){
