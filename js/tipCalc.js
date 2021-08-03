@@ -16,22 +16,22 @@ class Tip{
 
 class UI{
     constructor (){
-        this.tip = document.querySelector(".tip-percent");
+        this.tip_ = document.querySelector(".tip-percent");
         this.total = document.querySelector(".total");
     }
     showResult(tipPercent, tipTotal){
-        this.tip.textContent = `$${tipPercent}`;
+        this.tip_.textContent = `$${tipPercent}`;
         this.total.textContent = `$${tipTotal}`;
     }
 
     reset(){
-        this.tip.textContent = "$0.00";
+        this.tip_.textContent = "$0.00";
         this.total.textContent = "$0.00";
         for (this.input of  document.getElementsByTagName("input")){
             this.input.value = ""
         }
-        for (this.tip of document.querySelectorAll(".tip")){
-            this.tip.id = "";
+        for (this.tip__ of document.querySelectorAll(".tip")){
+            this.tip__.id = "";
         }
     }
     active(target, grid){
