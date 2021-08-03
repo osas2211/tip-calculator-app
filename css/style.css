@@ -98,7 +98,7 @@ body {
 .input {
   flex-basis: 48%; }
   .input .input__bill, .input .tip-selection {
-    margin-bottom: 1.5rem; }
+    margin-bottom: 2rem; }
 
 .tip-selection .tip {
   text-align: center;
@@ -151,14 +151,20 @@ body {
         font-size: 0.7rem;
         opacity: 0.6; }
     .calc-tip .tip-amount .amount {
-      font-size: 2rem;
+      font-size: 2.3rem;
+      font-weight: 900;
       color: #26c0ab; }
+  .calc-tip .tip-margin {
+    margin-top: 2rem;
+    margin-bottom: 4.5rem; }
 
 .num-of-people div {
   display: flex;
   justify-content: space-between; }
 
 @media (max-width: 1200px) {
+  body {
+    font-size: 120%; }
   .header {
     top: 6rem; }
   .main-layout {
@@ -173,9 +179,11 @@ body {
         margin-top: 3rem; } }
 
 @media (max-width: 700px) {
+  .header {
+    top: 4rem; }
   .main-layout {
     width: 100vw;
-    top: -6rem;
+    top: -12rem;
     border-radius: 30px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0; }

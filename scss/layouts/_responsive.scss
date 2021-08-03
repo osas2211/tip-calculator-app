@@ -1,4 +1,8 @@
 @media (max-width: 1200px) {
+    body{
+        font-size: 120%;
+    }
+
     .header{
         top: 6rem;
     }
@@ -20,9 +24,12 @@
 }
 
 @media (max-width: 700px) {
+    .header{
+        top: 4rem;
+    }
     .main-layout{
         width: 100vw;
-        top: -6rem;
+        top: -12rem;
         border-radius: 30px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
