@@ -27,7 +27,13 @@
         border-radius: 3px;
         font-weight: 700;
         cursor: pointer;
+        transition: all 0.7s;
+        &:hover{
+            background-color: $Light-grayish-cyan;
+            color: $Very-dark-cyan;
+        }
     }
+    
     .tip p{
         display: inline;
     }

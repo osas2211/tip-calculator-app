@@ -50,7 +50,11 @@ body {
   padding: 0.5rem;
   border-radius: 6px;
   background-color: #26c0ab;
-  font-weight: 700; }
+  font-weight: 700;
+  transition: all 0.7s; }
+  .btn:link:hover,
+  .btn:visited:hover {
+    background-color: #c5e4e7; }
 
 .reset {
   opacity: 0.5; }
@@ -103,7 +107,11 @@ body {
   padding: 0.5rem;
   border-radius: 3px;
   font-weight: 700;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.7s; }
+  .tip-selection .tip:hover {
+    background-color: #c5e4e7;
+    color: #00494d; }
 
 .tip-selection .tip p {
   display: inline; }

@@ -10,6 +10,10 @@
     border-radius: 6px;
     background-color: $strong-cyan;
     font-weight: 700;
+    transition: all 0.7s;
+    &:hover{
+        background-color: $Light-grayish-cyan;
+    }
 }
 
 .reset{
