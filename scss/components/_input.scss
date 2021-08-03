@@ -5,7 +5,12 @@
     padding: 0.5rem;
     background-color: $Light-grayish-cyan-2;
     width: 100%;
+    border-radius: 5px;
+    &:focus{
+        outline: 1px solid $strong-cyan;
+    }
 }
+
 
 .bill, .num{
     background-repeat: no-repeat;

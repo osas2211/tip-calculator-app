@@ -14,6 +14,7 @@ body {
 
 .main-layout {
   background-color: white;
+  width: 60%;
   border-radius: 20px;
   box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.24);
   position: absolute;
@@ -24,49 +25,6 @@ body {
   flex-wrap: wrap;
   padding: 2rem;
   justify-content: center; }
-  .main-layout .input {
-    flex-basis: 48%; }
-    .main-layout .input .input__bill, .main-layout .input .tip-selection {
-      margin-bottom: 1.5rem; }
-    .main-layout .input .tip-selection .tip {
-      text-align: center;
-      background-color: #00494d;
-      color: white;
-      padding: 0.5rem;
-      border-radius: 3px; }
-  .main-layout .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px; }
-    .main-layout .grid-container .tip-custom input {
-      width: 100%;
-      padding: 0.5rem;
-      outline: none;
-      border: none;
-      background-color: #edf6f7; }
-  .main-layout .calc-tip {
-    flex-basis: 48%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 2rem;
-    background-color: #00494d;
-    margin-left: 4%;
-    border-radius: 10px;
-    color: white; }
-    .main-layout .calc-tip .tip-amount {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      .main-layout .calc-tip .tip-amount .amount-text {
-        font-size: 0.8rem; }
-        .main-layout .calc-tip .tip-amount .amount-text span {
-          display: block;
-          font-size: 0.7rem;
-          opacity: 0.6; }
-      .main-layout .calc-tip .tip-amount .amount {
-        font-size: 2rem;
-        color: #26c0ab; }
 
 .text {
   font-size: 0.76rem;
@@ -94,13 +52,19 @@ body {
   background-color: #26c0ab;
   font-weight: 700; }
 
+.reset {
+  opacity: 0.5; }
+
 .input-full-width {
   outline: none;
   border: none;
   text-align: end;
   padding: 0.5rem;
   background-color: #edf6f7;
-  width: 100%; }
+  width: 100%;
+  border-radius: 5px; }
+  .input-full-width:focus {
+    outline: 1px solid #26c0ab; }
 
 .bill, .num {
   background-repeat: no-repeat;
@@ -115,6 +79,76 @@ body {
 
 .num {
   background-image: url("../images/icon-person.svg"); }
+
+#active {
+  background-color: #26c0ab;
+  color: #00494d; }
+
+.error {
+  color: #bd2929;
+  display: none; }
+
+#input-error {
+  outline-color: #bd2929; }
+
+.input {
+  flex-basis: 48%; }
+  .input .input__bill, .input .tip-selection {
+    margin-bottom: 1.5rem; }
+
+.tip-selection .tip {
+  text-align: center;
+  background-color: #00494d;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 3px;
+  font-weight: 700;
+  cursor: pointer; }
+
+.tip-selection .tip p {
+  display: inline; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px; }
+  .grid-container .tip-custom input {
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #edf6f7; }
+    .grid-container .tip-custom input:focus {
+      border: 1px solid #26c0ab; }
+
+.calc-tip {
+  flex-basis: 48%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #00494d;
+  margin-left: 4%;
+  border-radius: 10px;
+  color: white; }
+  .calc-tip .tip-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .calc-tip .tip-amount .amount-text {
+      font-size: 0.8rem; }
+      .calc-tip .tip-amount .amount-text span {
+        display: block;
+        font-size: 0.7rem;
+        opacity: 0.6; }
+    .calc-tip .tip-amount .amount {
+      font-size: 2rem;
+      color: #26c0ab; }
+
+.num-of-people div {
+  display: flex;
+  justify-content: space-between; }
 
 @media (max-width: 1200px) {
   .header {

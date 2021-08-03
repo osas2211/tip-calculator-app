@@ -1,0 +1,87 @@
+#active{
+    background-color: $strong-cyan;
+    color: $Very-dark-cyan;
+}
+
+.error{
+    color: rgb(189, 41, 41);
+    display: none;
+}
+#input-error{
+    outline-color: rgb(189, 41, 41);
+}
+
+.input{
+    flex-basis: 48%;
+    .input__bill, .tip-selection{
+        margin-bottom: 1.5rem;
+    }
+}
+
+.tip-selection{
+    .tip{
+        text-align: center;
+        background-color: $Very-dark-cyan;
+        color: $White;
+        padding: 0.5rem;
+        border-radius: 3px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .tip p{
+        display: inline;
+    }
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    .tip-custom input{
+        width: 100%;
+        padding: 0.5rem;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background-color: $Light-grayish-cyan-2;
+        &:focus{
+            border: 1px solid $strong-cyan;
+        }
+    } 
+}
+
+.calc-tip{
+    flex-basis: 48%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: $Very-dark-cyan;
+    margin-left: 4%;
+    border-radius: 10px;
+    color: $White;
+    .tip-amount{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .amount-text{
+            font-size: 0.8rem;
+            span{
+                display: block;
+                font-size: 0.7rem;
+                opacity: 0.6;
+            }
+            
+        }
+        .amount{
+            font-size: 2rem;
+            color: $strong-cyan;
+        }
+    }
+}
+
+.num-of-people div{
+    display: flex;
+    justify-content: space-between;
+    
+}
