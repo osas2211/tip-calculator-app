@@ -5,11 +5,23 @@ class Tip{
         this.tipPecent = tipPecent;
     }
     calcTip(){
-        return ((this.bill * (this.tipPecent/100)) / this.numPerson).toFixed(2);
+        const result = ((this.bill * (this.tipPecent/100)) / this.numPerson).toFixed(2);
+        if (result === "NaN" || result === "Infinity"){
+            return (this.bill * (this.tipPecent/100)).toFixed(2)
+        }
+        else{
+            return result
+        } 
     }
 
     calcTotal(){
-        return ((this.bill/this.numPerson) + ((this.bill * (this.tipPecent/100)) / this.numPerson)).toFixed(2);
+        const result = ((this.bill/this.numPerson) + ((this.bill * (this.tipPecent/100)) / this.numPerson)).toFixed(2);
+        if (result === "NaN" || result === "Infinity"){
+            return "0.00"
+        }
+        else{
+            return result
+        } 
     }
 }
 
